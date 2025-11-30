@@ -1,3 +1,4 @@
+<?php
 namespace App\Http\Controllers;
 
 use App\Models\Task;
@@ -15,7 +16,7 @@ class TaskController extends Controller
     }
 
     public function update(Request $request, Task $Task) {
-        $Task->update($request->only('title', 'completed'));
+        $Task->update($request->only('title', 'is_done'));
         return $Task;
     }
 

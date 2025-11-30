@@ -8,10 +8,10 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->boolean('completed')->default(false);
+            $table->boolean('is_done')->default(false);
             $table->timestamps();
         });
     }
